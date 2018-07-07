@@ -1,4 +1,4 @@
-package com.vivek.springlearnings;
+package com.vivek.searchmodule;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,27 +8,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class SpringlearningApplication {
+public class SearchmoduleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringlearningApplication.class, args);
+		SpringApplication.run(SearchmoduleApplication.class, args);
 	}
-	
-	/*@RestController
-    @RequestMapping("/")
-    class HelloController {
-        @GetMapping
-        public String getMessage() {
-            return "Hello World!!";
-        }
-    }*/
-	
 	
 	@RestController
     @RequestMapping("hello")
     class HelloControllerWithParams {
         @GetMapping
-        public String getMessage(@RequestParam(defaultValue = "Hugo") String name) {
+        public String getMessage(@RequestParam(defaultValue = "Live Reload!") String name) {
             return "Hello " + name;
         }
     }

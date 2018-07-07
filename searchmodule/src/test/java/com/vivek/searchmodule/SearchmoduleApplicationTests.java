@@ -1,4 +1,4 @@
-package com.vivek.springlearnings;
+package com.vivek.searchmodule;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringlearningApplicationTests {
+public class SearchmoduleApplicationTests {
 
 	@Test
 	public void contextLoads() {
