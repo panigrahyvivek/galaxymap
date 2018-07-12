@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Planets</title>
+<title>Search Page</title>
+<link href="../static/css/layout.css" th:href="@{/css/layout.css}"
+	rel="stylesheet" />
+<!-- <script type="text/javascript" src="controller.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 	<h1 th:text="${title}"></h1>
-	<input type="search" id="mySearch" placeholder="Search.."/>
+	<form autocomplete="off">
+		<div class="autocomplete" style="width: 300px;">
+			<input id="myInput" type="text"
+				placeholder="Search..">
+		</div>
+		<input type="submit">
+	</form>
+	<script src="controller.js"></script>
 </body>
 </html>
 
