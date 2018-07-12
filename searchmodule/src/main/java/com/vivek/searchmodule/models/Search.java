@@ -27,5 +27,15 @@ public class Search {
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date searchDate;
+	
+	public String getText() {
+		return text;
+	}
+	
+	public void setText(String text) {
+		this.text = text;
+	}
+	
+	
 
 }
