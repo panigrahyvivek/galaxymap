@@ -1,0 +1,7 @@
+---
+applications:
+- name: searchmodule
+  memory: 700M
+  instances: 1
+  buildpack: sap_java_buildpack
+  path: ./target/searchmodule-0.0.1-SNAPSHOT.jar

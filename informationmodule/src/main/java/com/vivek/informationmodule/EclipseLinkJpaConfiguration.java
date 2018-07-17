@@ -16,6 +16,7 @@ import org.springframework.boot.autoconfigure.transaction.TransactionManagerCust
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.AbstractJpaVendorAdapter;
@@ -25,6 +26,8 @@ import org.springframework.transaction.jta.JtaTransactionManager;
 @Configuration
 @EnableJpaRepositories("com.vivek.informationmodule.repositories")
 public class EclipseLinkJpaConfiguration extends JpaBaseConfiguration{
+	
+	
 	
 	protected EclipseLinkJpaConfiguration(DataSource dataSource, JpaProperties properties,
 			ObjectProvider<JtaTransactionManager> jtaTransactionManager,

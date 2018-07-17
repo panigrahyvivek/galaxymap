@@ -1,0 +1,9 @@
+---
+applications:
+- name: informationmodule
+  memory: 700M
+  instances: 1
+  buildpack: sap_java_buildpack
+  path: ./target/informationmodule-0.0.1-SNAPSHOT.jar
+services:
+- pgres
