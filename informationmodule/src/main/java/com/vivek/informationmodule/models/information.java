@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,7 +16,13 @@ import lombok.Setter;
 @Entity
 @Data
 @Table
+@AllArgsConstructor
 public class information implements Serializable {
+	
+	
+	public information() {
+		
+	}
 	
 	@Id
 	@Column
@@ -29,6 +35,12 @@ public class information implements Serializable {
 	private String source;
 	
 	
+	public information(String id, String type, String source) {
+		this.id = id;
+		this.type = type;
+		this.source = source;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -52,6 +64,15 @@ public class information implements Serializable {
 	public void setSource(String source) {
 		this.source = source;
 	}
+	
+	/*public static class builder{
+		public information build(){
+			information i = new information();
+			i.set
+			return i;
+			
+		}
+	}*/
 	
 	
 }
